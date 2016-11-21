@@ -7,5 +7,5 @@ FROM plain/alpine-supervisord-glibc
 COPY alioss /
 RUN cd alioss && python setup.py install && cp osscmd /usr/bin/
 
-ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisor/supervisord.conf"]
+CMD []
 
