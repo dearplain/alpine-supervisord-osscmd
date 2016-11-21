@@ -4,7 +4,7 @@ FROM plain/alpine-supervisord-glibc
 # && mv OSS_Python_API_20160419.zip?spm=5176.doc32171.2.2.749aGM OSS_Python_API_20160419.zip \
 # && unzip OSS_Python_API_20160419.zip && cd OSS_Python_API_20160419
 
-RUN apk add --no-cache wget ca-certificates
+RUN apk add --no-cache wget ca-certificates tzdata
 COPY alioss /alioss
 RUN cd alioss && python setup.py install && cp osscmd /usr/bin/
 
