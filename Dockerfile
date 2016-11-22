@@ -6,7 +6,7 @@ FROM plain/alpine-supervisord-glibc
 
 RUN apk add --no-cache wget ca-certificates tzdata
 COPY alioss /alioss
-RUN cd alioss && python setup.py install && cp osscmd /usr/bin/
+RUN cd alioss && python setup.py install && chmod +x osscmd && cp osscmd /usr/bin/
 
 CMD []
 
